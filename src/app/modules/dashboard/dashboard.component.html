@@ -1,19 +1,37 @@
+<!--Area Graph Chart-->
 <div>
-    Line Charts
+    <app-widget-area [data]="areaChart"></app-widget-area>
+</div>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+
+<!--Cards-->
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+  <mat-card fxFlex="25">
+    <app-widget-card label="New Users" total="18k" percentage="50%" [data]="cardChart"></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card label="Users Replied" total="8k" percentage="65%" [data]="cardChart"></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card label="Users Left" total="31" percentage="1.5%" [data]="cardChart"></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card label="Referral" total="6k" percentage="30%" [data]="cardChart"></app-widget-card>
+  </mat-card>
 </div>
 
 <mat-divider></mat-divider>
+<br>
 
-<div>
-    <div>Line chart</div>
-    <div>Line chart</div>
-    <div>Line chart</div>
-    <div>Line chart</div>
-</div>
-
-<mat-divider></mat-divider>
-
-<div>
-    <div>Table</div>
-    <div>Pie Charts</div>
+<!-- Table and Pie Chart -->
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="60">
+      <app-widget-table></app-widget-table>
+    </div>
+    <div fxFlex="40">
+      <app-widget-pie [data]="pieChart"></app-widget-pie>
+    </div>
 </div>

@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-@Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
+  @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
@@ -19,5 +19,10 @@ export class HeaderComponent implements OnInit {
 
     // Emit the event when the button is clicked
     this.toggleSideBarForMe.emit();
+
+    // Just adjustments for improve UX
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'))
+    }, (300));
   }
 }
